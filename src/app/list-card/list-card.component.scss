@@ -1,0 +1,121 @@
+.container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+  
+    .card {
+      margin: 20px;
+      min-width: 300px;
+      max-width: 300px;
+      border: 2px solid black;
+      scroll-snap-align: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      white-space: nowrap;
+      float: left;
+    }
+    .right-arrow-btn {
+      position: absolute;
+      right: 25px;
+      border: 1px solid green;
+      background-color: gray;
+      padding: 5px;
+      cursor: pointer;
+    }
+  }
+  
+  p {
+    font-family: Lato;
+  }
+  
+  .info-widget {
+    width: 31.75%;
+    border: 1px solid black;
+    display: inline-block;
+    .heading {
+      float: top;
+    }
+    .img-profile {
+      margin: 30px;
+      border-radius: 50%;
+    }
+  }
+  
+  .middle {
+    display: flex;
+    float: left;
+    width: 90%;
+    overflow: auto;
+    overflow-x: hidden;
+    /*will change this to hidden later to deny scolling to user*/
+    white-space: nowrap;
+  }
+  
+  button {
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+  
+  .cdk-virtual-scroll-data-source-example {
+    scroll-behavior: smooth;
+    position: relative;
+    .scroll {
+      display: none;
+    }
+    &:hover {
+      .scroll {
+        display: block;
+      }
+    }
+  }
+  
+  .cdk-virtual-scroll-data-source-example .example-viewport {
+    height: 150px;
+    width: 100%;
+    margin: 10px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    .scroll-card {
+      max-width: 300px;
+      min-width: 200px;
+      text-align: center;
+      border: 2px solid #E8EAEF;
+      padding-bottom: 10px;
+    }
+  }
+  
+  .cdk-virtual-scroll-data-source-example
+    .example-viewport
+    .cdk-virtual-scroll-content-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .cdk-virtual-scroll-data-source-example .example-item {
+    // width: 100%;
+    // writing-mode: vertical-lr;
+    background-color: white;
+  }
+  
+  .scroll {
+    cursor: pointer;
+    position: absolute;
+    z-index: 200;
+  }
+  
+  .left-scroll {
+    top: 50px;
+  }
+  
+  .right-scroll {
+    top: 50px;
+    right: 0px;
+  }
+  

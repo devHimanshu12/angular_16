@@ -1,0 +1,43 @@
+<!-- <cdk-virtual-scroll-viewport (scroll)=onScroll($event) itemSize="150"  class="list-viewport">
+  <div class="banner">
+    <app-banner [data]="data" [bannerData]="bannerData"  (isNextClicked)="addData($event)"></app-banner>
+  </div>
+  <div *cdkVirtualFor="let item of lists; templateCacheSize: 0" class="list-item">
+    <div class="lists">
+      <ng-container *ngFor="let item of list; let i = index">
+        <h1>{{item}}</h1>
+        <app-list [data]="item.data"  (isNextClicked)="addData($event)"></app-list>
+      </ng-container>
+    </div>
+  </div>
+</cdk-virtual-scroll-viewport> -->
+
+<!-- <div class="banner">
+  <app-banner [data]="data" [bannerData]="bannerData"  (isNextClicked)="addData($event)"></app-banner>
+</div>
+<div class="lists">
+  <ng-container *ngFor="let item of list; let i = index">
+    <h1>{{item}}</h1>
+    <app-list [data]="data"  (isNextClicked)="addData($event)"></app-list>
+  </ng-container>
+</div> -->
+<!-- <ngx-flicking [options]="{ moveType: 'freeScroll', bound: true }">
+    <span flicking-panel class="button mr-2 is-white">🍎 Apple</span>
+    <span flicking-panel class="button mr-2 is-white">🍉 Watermelon</span>
+    <span flicking-panel class="button mr-2 is-white">🥝 Kiwi</span>
+    <span flicking-panel class="button mr-2 is-white">...</span>
+  </ngx-flicking> -->
+  <div class="container" cdkVirtualScrollingElement (scroll)=onScroll($event)>
+    <div class="banner">
+      <app-banner [data]="data" [bannerData]="bannerData"  (isNextClicked)="addData($event)"></app-banner>
+    </div>
+    <header class="header"><div>Header</div></header>
+    <cdk-virtual-scroll-viewport itemSize="150" class="example-viewport">
+      <div *cdkVirtualFor="let item of lists; templateCacheSize: 0"  class="example-item">
+        <div class="lists">
+          <h1>{{item.label}}</h1>
+          <app-list [data]="item.data" (isNextClicked)="addData($event)"></app-list>
+        </div>
+        </div>
+    </cdk-virtual-scroll-viewport>
+  </div>

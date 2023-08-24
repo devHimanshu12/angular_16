@@ -1,0 +1,40 @@
+::ng-deep .mat-button-toggle-standalone.mat-button-toggle-appearance-standard,
+.mat-button-toggle-group-appearance-standard {
+  background-color: #F4F5F7
+  ;
+  height: 32px !important;
+  border-radius: 8px;
+  padding: 2px !important;
+  cursor: pointer;
+  border: none;
+}
+
+::ng-deep .mat-button-toggle.mat-button-toggle-appearance-standard {
+  background: #F4F5F7  ;
+  width: 164px !important;
+  border-radius: 6px !important;
+  display: flex;
+}
+
+::ng-deep
+  .mat-button-toggle-appearance-standard
+  .mat-button-toggle-label-content {
+  line-height: 26px !important;
+}
+
+::ng-deep
+  .mat-button-toggle-group-appearance-standard
+  .mat-button-toggle
+  + .mat-button-toggle {
+  border-left: none !important;
+}
+
+::ng-deep
+  .mat-button-toggle.mat-button-toggle-appearance-standard.mat-button-toggle-checked {
+  border-radius: 7px !important;
+  background: #ffffff;
+  border: 0.5px solid #d1d1d1;
+  box-shadow: 0px 0.15px 0.45px rgba(0, 0, 0, 0.11),
+    0px 0.8px 1.8px rgba(0, 0, 0, 0.13);
+  font-weight: 600;
+}

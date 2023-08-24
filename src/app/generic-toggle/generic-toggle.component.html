@@ -1,0 +1,7 @@
+<mat-button-toggle-group>
+    <ng-container *ngFor="let name of toggleOptions; let i = index">
+        <mat-button-toggle [value]="name" (change)="onValueChange($event.value)" [checked]="i == 0">
+            {{name}}
+        </mat-button-toggle>
+    </ng-container>
+</mat-button-toggle-group>

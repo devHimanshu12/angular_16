@@ -1,0 +1,16 @@
+<!-- <div class="common-tab-group">
+    <mat-tab-group animationDuration="0ms" (selectedTabChange)="onValueChange($event)">
+        <ng-container *ngFor="let item of tabOptions">
+            <mat-tab [label]="item.label" [id]="item.key"></mat-tab>
+        </ng-container>
+    </mat-tab-group>
+</div> -->
+
+<div class="common-tab-group">
+    <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+        <a mat-tab-link *ngFor="let item of tabOptions; let i = index"
+           (click)="selectedKey = item.key; onValueChange(item)"
+           [active]="selectedKey == item.key"> {{item.label}} </a>
+      </nav>
+    <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+</div>

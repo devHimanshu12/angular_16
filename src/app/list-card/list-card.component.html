@@ -1,0 +1,16 @@
+<div class="cdk-virtual-scroll-data-source-example">
+  <div class="scroll left-scroll">
+    <button (click)="scrollLeft()"><img style="width: 30px;" src="../assets/images/left-scroll.png" alt=""></button>
+  </div>
+  <cdk-virtual-scroll-viewport #widgetsContent orientation="horizontal" itemSize="120" class="example-viewport">
+    <div *cdkVirtualFor="let item of data" class="example-item">
+      <div class="scroll-card">
+        <img class="img-profile" src="../assets/images/linkedIn.png" alt="">
+        <div class="heading">{{item}}</div>
+      </div>
+    </div>
+  </cdk-virtual-scroll-viewport>
+  <div class="scroll right-scroll">
+    <button (click)="scrollRight()"><img style="width: 30px;" src="../assets/images/right-scroll.png" alt=""></button>
+  </div>
+</div>

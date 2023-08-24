@@ -1,0 +1,31 @@
+.banner-panel {
+  width: 100vw;
+  height: 425px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image:  linear-gradient( to right, #F8F9FB 5%, transparent 58% ), url("../../assets/images/banner.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 57%;
+  background-color: #F8F9FB;
+
+  
+}
+
+::ng-deep.flicking-pagination-bullet-active {
+  background-color: #329dff !important;
+}
+
+.flicking-pagination {
+  height: fit-content;
+  top: 40px;
+  text-align: left !important;
+  left: 40px !important;
+}
+
+::ng-deep.flicking-pagination-bullet{
+  width: 12px;
+  height: 12px;
+  background-color: #B7DCFF;
+}

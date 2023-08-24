@@ -1,0 +1,10 @@
+<ngx-flicking class="flicking-container" 
+  [options]="{align:'prev',duration:3000,circular: false,bound: true,panelsPerView: 10}"
+  (renderPanelChange)="onRenderPanelChange($event)" 
+  [plugins]="plugins">
+  <ng-container *ngFor="let item of data">
+    <div flicking-panel class="card-panel">{{item}}</div>
+  </ng-container>
+  <span in-viewport class="flicking-arrow-prev is-thin"></span>
+  <span in-viewport class="flicking-arrow-next is-thin" (click)="addItems()"></span>
+</ngx-flicking>
