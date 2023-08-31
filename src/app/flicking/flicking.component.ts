@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 import { Plugin } from '@egjs/ngx-flicking';
 import { Fade, AutoPlay, Arrow, Pagination } from '@egjs/flicking-plugins';
 import { FlickingError, ERROR_CODE } from "@egjs/flicking";
+import { ActionBarArray } from '../config/action-bar';
 
 
 @Component({
@@ -17,6 +18,7 @@ export class FlickingComponent {
   list:Array<any>=[]
   listCount:number=1;
   lists: any = [{}]
+  actionBarArray:any=[]
 
 
   constructor(private cd :ChangeDetectorRef){
@@ -37,6 +39,7 @@ export class FlickingComponent {
   }
 
   ngOnInit(){
+    this.actionBarArray = ActionBarArray
     let newList:any=[]
     this.addItems()
     for(let i = 0; i<3;i++){

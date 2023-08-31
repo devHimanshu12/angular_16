@@ -1,6 +1,6 @@
 .banner-panel {
   width: 100vw;
-  height: 425px;
+  // height: 425px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -28,4 +28,9 @@
   width: 12px;
   height: 12px;
   background-color: #B7DCFF;
+}
+
+.banner-content{
+  margin: 85px 0 20px 40px;
+
 }

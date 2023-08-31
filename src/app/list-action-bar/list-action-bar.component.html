@@ -1,0 +1,47 @@
+<div class="list-action">
+    <ng-container *ngFor="let item of actionBarArray">
+        <div class="list-action--bar" (click)="handleAction(item)">
+            <ng-container *ngIf="item.action == 'track'; else otherActions ">
+                <div class="list-action--bar__track">
+                    <div class="list-action--bar__track--icon">
+                        <img [src]="item.iconPath" alt="">
+                    </div>
+                    <div class="list-action--bar__track__label">
+                        Track
+                    </div>
+                </div>
+            </ng-container>
+            <ng-template #otherActions>
+                <div class="list-action--bar__otherActions">
+                    <ng-container *ngIf="item.action != 'menu'; else showMenu">
+                        <div class="list-action--bar__otherActions--icon">
+                            <img [src]="item.iconPath" alt="">
+                        </div>
+                    </ng-container>
+                    <ng-template #showMenu>
+                        <div class="list-action--bar__otherActions--menu">
+                            <button mat-icon-button [matMenuTriggerFor]="menu" class="list-action--bar__otherActions--menu--btn">
+                                <mat-icon>more_vert</mat-icon>
+                              </button>
+                        </div>
+
+                    </ng-template>
+                </div>
+            </ng-template>
+        </div>
+    </ng-container>
+</div>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>dialpad</mat-icon>
+      <span>Redial</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>voicemail</mat-icon>
+      <span>Check voice mail</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+  </mat-menu>

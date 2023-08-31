@@ -1,11 +1,22 @@
-<ngx-flicking [options]="{circular:true,panelsPerView:1}" 
-    [plugins]="bannerPlugin">
-    <ng-container *ngFor="let item of bannerData">   
+<ngx-flicking [options]="{circular:true,panelsPerView:1}" [plugins]="bannerPlugin">
+    <ng-container *ngFor="let item of bannerData">
         <div class="banner-panel" flicking-panel>
-                <span class="">{{item}}</span>
-                <div class="banner-card-panel">
-                    <app-list [data]="data" (isNextClicked)="addData($event)"></app-list>
+            <div class="banner-content">
+                <div class="title">
+                    <h1>
+                        Title
+                    </h1>
                 </div>
+                <div>
+                    <h3>Sub Title</h3>
+                </div>
+                <div>
+                    <app-list-action-bar [actionBarArray]="actionBarArray" (selectedAction)="handleAction($event)"></app-list-action-bar>
+                </div>
+            </div>
+            <div class="banner-card-panel">
+                <app-list [data]="data" (isNextClicked)="addData($event)"></app-list>
+            </div>
         </div>
     </ng-container>
     <div in-viewport class="flicking-pagination"></div>

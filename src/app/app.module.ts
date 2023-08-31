@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {  NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,9 +18,11 @@ import { GenericToggleComponent } from './generic-toggle/generic-toggle.componen
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { TabGroupComponent } from './tab-group/tab-group.component';
 import {MatTabsModule} from '@angular/material/tabs';
-
-
-
+import { ListActionBarComponent } from './list-action-bar/list-action-bar.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { SlidingButtonComponent } from './sliding-button/sliding-button.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import {MatTabsModule} from '@angular/material/tabs';
     BannerComponent,
     HeaderComponent,
     GenericToggleComponent,
-    TabGroupComponent
+    TabGroupComponent,
+    ListActionBarComponent,
+    SlidingButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,8 +47,11 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatFormFieldModule,
     MatSelectModule,
     MatButtonToggleModule,
-    MatTabsModule
-  ],
+    MatTabsModule,
+    MatMenuModule,
+    MatIconModule,
+    MatSlideToggleModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

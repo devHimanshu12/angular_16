@@ -9,13 +9,20 @@ import { Fade, AutoPlay, Arrow, Pagination } from '@egjs/flicking-plugins';
 })
 export class BannerComponent {
 
-  public bannerPlugin: Plugin[]=[new AutoPlay({duration:2000,direction:"NEXT",animationDuration:2000,stopOnHover:true}),new Pagination({type:'bullet'})]
+  public bannerPlugin: Plugin[]=[new AutoPlay({duration:200000,direction:"NEXT",animationDuration:2000,stopOnHover:true}),new Pagination({type:'bullet'})]
   @Input() data:any;
   @Input() bannerData:any
   @Output() isNextClicked = new EventEmitter(false)
+  @Input() actionBarArray:any = []
+
+
 
   addData(event:boolean){
     this.isNextClicked.emit(event)
+  }
+
+  handleAction(event:any){
+    console.log('event',event)
   }
 
 }
