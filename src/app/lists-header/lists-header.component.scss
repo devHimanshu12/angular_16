@@ -1,0 +1,14 @@
+@mixin flex-container($direction:row,$spacing:space-between,$alignment:null){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $spacing;
+    align-items: $alignment;
+}
+.all-list-header{
+    background-color: #FFFFFF;
+    @include flex-container();
+
+    &__left{
+        @include flex-container()
+    }
+}

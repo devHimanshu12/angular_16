@@ -22,7 +22,10 @@ import { ListActionBarComponent } from './list-action-bar/list-action-bar.compon
 import {MatMenuModule} from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import { SlidingButtonComponent } from './sliding-button/sliding-button.component'
+import { SlidingButtonComponent } from './sliding-button/sliding-button.component';
+import { ListsHeaderComponent } from './lists-header/lists-header.component';
+import { AllListHeaderComponent } from './all-list-header/all-list-header.component';
+import { GenericDropdownComponent } from './generic-dropdown/generic-dropdown.component'
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { SlidingButtonComponent } from './sliding-button/sliding-button.componen
     TabGroupComponent,
     ListActionBarComponent,
     SlidingButtonComponent,
+    ListsHeaderComponent,
+    AllListHeaderComponent,
+    GenericDropdownComponent,
   ],
   imports: [
     BrowserModule,

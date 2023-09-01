@@ -4,7 +4,7 @@
       <app-banner [data]="data" [bannerData]="bannerData"  (isNextClicked)="addData($event)" [actionBarArray]="actionBarArray"></app-banner>
     </div>
     <header class="header"><div>
-      <app-sliding-button></app-sliding-button>
+      <app-all-list-header></app-all-list-header>
     </div></header>
     <cdk-virtual-scroll-viewport itemSize="150" class="example-viewport">
       <div *cdkVirtualFor="let item of lists; templateCacheSize: 0"  class="example-item">

@@ -1,0 +1,26 @@
+<div class="all-list-header">
+    <div class="all-list-header__label">
+        {{"All List"}}
+    </div>
+    <div class="all-list-header__left">
+        <div class="all-list-header--sort">
+        <div>
+            Sort by
+        </div>
+        <div>
+            <app-generic-dropdown [options]="sortOptions" [selectedValue]="selectedValue"></app-generic-dropdown>
+        </div>
+        </div>
+        <div class="all-list-header--tracked">
+            <span>
+                View Tracked 
+            </span>
+            <span>
+                <app-sliding-button ></app-sliding-button>
+            </span> 
+        </div>
+        <div class="all-list-header--search">
+            Search
+        </div>
+    </div>
+</div>

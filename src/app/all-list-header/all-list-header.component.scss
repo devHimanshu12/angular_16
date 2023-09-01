@@ -1,0 +1,24 @@
+@mixin flex-container($direction:row,$spacing:space-between,$alignment:center){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $spacing;
+    align-items: $alignment;
+}
+.all-list-header{
+    height: 100px;
+    padding: 0 40px;
+    background-color: #FFFFFF;
+    @include flex-container();
+
+    &__label{
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &__left{
+        @include flex-container()
+    }
+    &--tracked{
+        @include flex-container()
+    }
+}
