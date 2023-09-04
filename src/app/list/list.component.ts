@@ -1,6 +1,14 @@
 import { ChangeDetectorRef, Component, EventEmitter, Input, Output } from '@angular/core';
 import { Arrow } from '@egjs/flicking-plugins';
 import { Plugin } from '@egjs/ngx-flicking';
+import disableDevtool from 'disable-devtool'
+
+
+// we can pass options to modify devTools disbale tool, otherwise it disables devTools by key board shortcuts and right click and etc
+// let options = {
+//   disableMenu: false, // default value is true
+// }
+// disableDevtool();
 
 @Component({
   selector: 'app-list',

@@ -25,7 +25,12 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { SlidingButtonComponent } from './sliding-button/sliding-button.component';
 import { ListsHeaderComponent } from './lists-header/lists-header.component';
 import { AllListHeaderComponent } from './all-list-header/all-list-header.component';
-import { GenericDropdownComponent } from './generic-dropdown/generic-dropdown.component'
+import { GenericDropdownComponent } from './generic-dropdown/generic-dropdown.component';
+import { CardLoaderComponent } from './card-loader/card-loader.component';
+import { ListLoaderComponent } from './list-loader/list-loader.component';
+import { BannerLoaderComponent } from './banner-loader/banner-loader.component'
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+
 
 @NgModule({
   declarations: [
@@ -42,6 +47,9 @@ import { GenericDropdownComponent } from './generic-dropdown/generic-dropdown.co
     ListsHeaderComponent,
     AllListHeaderComponent,
     GenericDropdownComponent,
+    CardLoaderComponent,
+    ListLoaderComponent,
+    BannerLoaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +64,8 @@ import { GenericDropdownComponent } from './generic-dropdown/generic-dropdown.co
     MatTabsModule,
     MatMenuModule,
     MatIconModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    NgxSkeletonLoaderModule
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,25 @@
+.card-wrapper {
+  width: 120px;
+  height: 85px;
+  border-radius: 3px;
+  border: 1px solid #e8eaef;
+  display: flex;
+  flex-direction: column;
+  padding: 9px 13px;
+  margin: 10px;
+  background: #fff;
+  &__square-loader{
+    height: 34px;
+    width: 34px;
+    margin-bottom: 12px;
+  }
+  &__first-line-loader{
+    height: 11px;
+    width: 110px;
+    margin-bottom: 5px;
+  }
+  &__second-line-loader{
+    height: 11px;
+    width: 44px;
+  }
+}

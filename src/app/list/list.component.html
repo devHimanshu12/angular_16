@@ -1,5 +1,5 @@
 <ngx-flicking class="flicking-container" 
-  [options]="{align:'prev',duration:3000,circular: false,bound: true,panelsPerView: 10}"
+  [options]="{align:'prev',duration:3000,circular: false,bound:true}"
   (renderPanelChange)="onRenderPanelChange($event)" 
   [plugins]="plugins">
   <ng-container *ngFor="let item of data">
