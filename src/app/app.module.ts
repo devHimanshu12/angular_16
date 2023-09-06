@@ -28,8 +28,8 @@ import { AllListHeaderComponent } from './all-list-header/all-list-header.compon
 import { GenericDropdownComponent } from './generic-dropdown/generic-dropdown.component';
 import { CardLoaderComponent } from './card-loader/card-loader.component';
 import { ListLoaderComponent } from './list-loader/list-loader.component';
-import { BannerLoaderComponent } from './banner-loader/banner-loader.component'
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { ListHeaderLoaderComponent } from './list-header-loader/list-header-loader.component';
 
 
 @NgModule({
@@ -49,7 +49,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     GenericDropdownComponent,
     CardLoaderComponent,
     ListLoaderComponent,
-    BannerLoaderComponent,
+    ListHeaderLoaderComponent,
   ],
   imports: [
     BrowserModule,

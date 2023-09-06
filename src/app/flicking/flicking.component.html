@@ -1,6 +1,7 @@
   <div class="container" cdkVirtualScrollingElement (scroll)=onScroll($event)>
     <app-header></app-header>
-    <app-list-loader [items]="11"></app-list-loader>
+    <!-- <app-list-header-loader></app-list-header-loader>
+    <app-list-loader [items]="11"></app-list-loader> -->
     <div class="banner">
       <app-banner [data]="data" [bannerData]="bannerData"  (isNextClicked)="addData($event)" [actionBarArray]="actionBarArray"></app-banner>
     </div>
